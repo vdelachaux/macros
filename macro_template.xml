@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd" >
+<macros>
+	<!-- name = name as displayed in contextual menu -->
+	<!-- type_ahead_text = text to type to activate the macro using type ahead (default is the macro name) -->
+	<!-- type_ahead = should this macro be available using type ahead? (default is true) -->
+	<!-- note: if the macro contents uses the selection placeholder, it cannot be activated using type-ahead -->
+	<!-- in_menu = should this macro be displayed in contextual menu? (default is true) -->
+	<!-- in_toolbar (v13) = should this macro be displayed in macro button of the toolbar? (default is true) -->
+	<!-- method_event can be on_create, on_save, on_load, on_close, on_tab -->
+	<!-- version: if version is equal to 2, macro can use SET/GET MACRO PARAMETER method -->
+	<!-- 
+		<macro 
+			name="TEMPLATE" 
+			version="2" 
+			in_menu="true" 
+			in_toolbar="false" 
+			method_event="on_create" 
+			type_ahead="true"
+			type_ahead_text="parameter">
+			<text></text>
+		</macro>
+	-->
+</macros>
