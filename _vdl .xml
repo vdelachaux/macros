@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd" >
+<macros>
+        
+    <!-- THE FOLLOWING MACROS ARE DISPLAYED IN THE TOOLBAR MENU AND AVAILABLE THRU TYPE AHEAD-->
+    
+    <!-- BRANCHING STRUCTURES -->
+    
+		<!-- 
+    <macro name="If" in_menu="false" type_ahead="true" type_ahead_text="if">
+        <text>If(<caret/>)            
+                <selection/>          
+            End if</text>
+    </macro>
+		-->
+    
+    <macro name="If" in_menu="false" type_ahead="true" type_ahead_text="if">
+        <text>If(<caret/>)
+            
+                <selection/>
+            
+            Else
+            
+             // A "If" statement should never omit "Else" 
+            
+            End if</text>
+    </macro>
+    
+    <macro name="Case of" in_menu="false" type_ahead="true" type_ahead_text="Case of">
+        <text>Case of
+            //______________________________________________________
+            :(<caret/>)
+            
+                <selection/>
+            
+            //______________________________________________________
+            :(False)
+            
+            
+            
+            //______________________________________________________
+            Else
+            
+            // A "Case of" statement should never omit "Else"
+      
+            //______________________________________________________
+            End case</text>
+    </macro>
+    
+     <!-- separator line --> 
+    <macro name="-" in_menu="true" type_ahead="false"/>
+     
+    <!-- LOOPING STRUCTURES -->    
+    <macro name="For" in_menu="false" type_ahead="true" type_ahead_text="For">
+        <text>For($i;1;<caret/>;1)
+          
+              <selection/>
+          
+          End for</text>
+    </macro>
+    
+    <macro name="For each" in_menu="false" type_ahead="true" type_ahead_text="For">
+        <text>For each (<caret/>;collectionExpressionOrObject)
+            
+            <selection/>
+            
+            End for each</text>
+    </macro>
+    
+    <macro name="For each Until" in_menu="false" type_ahead="true" type_ahead_text="For">
+        <text>For each (<caret/>;collectionExpressionOrObject)  Until (booleanExpression)
+            
+            <selection/>
+            
+            End for each</text>
+    </macro>
+    
+    <macro name="For each While" in_menu="false" type_ahead="true" type_ahead_text="For">
+        <text>For each (<caret/>;collectionExpressionOrObject)  While (booleanExpression)
+            
+            <selection/>
+            
+            End for each</text>
+    </macro>
+    
+    <macro name="While" in_menu="false" type_ahead="true">
+        <text>While(<caret/>)
+            
+                <selection/>
+            
+            End while</text>
+    </macro> 
+    
+    <macro name="Repeat" in_menu="false" type_ahead="true">
+        <text>Repeat
+            
+                <selection/>
+            
+            Until(<caret/>)</text>
+    </macro>
+    
+     <!-- separator line --> 
+    <macro name="-" in_menu="true" type_ahead="false"/>
+    
+    <macro name="selection := New shared object" in_menu="false" type_ahead="false">
+        <text><selection/>:=New shared object
+        	Use(<selection/>)
+            
+            <selection/><caret/>
+            
+          End use
+        </text>
+    </macro>  
+    
+    <macro name="use [selection]" in_menu="false" type_ahead="true">
+        <text>Use(<selection/>)
+            
+                <selection/>.<caret/>
+            
+            End use
+        </text>
+    </macro>    
+    
+     <!-- separator line --> 
+    <macro name="-" in_menu="true" type_ahead="false"/>
+    
+     <macro name="bool[]" in_menu="false" type_ahead="true">
+        <text>bool:C1537(<selection/><caret/>)</text>
+    </macro>
+    
+     <macro name="num[]" in_menu="false" type_ahead="true">
+        <text>num(<selection/><caret/>)</text>
+    </macro>
+    
+     <macro name="not[]" in_menu="false" type_ahead="true">
+        <text>Not(<selection/><caret/>)</text>
+    </macro>
+    
+     <macro name="string[]" in_menu="false" type_ahead="true">
+        <text>string(<selection/><caret/>)</text>
+    </macro>
+    
+     <macro name="length[]" in_menu="false" type_ahead="true">
+        <text>length(<selection/><caret/>)</text>
+    </macro>
+    
+    <macro name="New object[]" in_menu="false" type_ahead="true" type_ahead_text="œ">
+        <text>New object:C1471("<caret/>";)</text>
+    </macro>
+    
+    <macro name="New collection[]" in_menu="false" type_ahead="true" type_ahead_text="©">
+        <text>New collection:C1472(<selection/><caret/>)</text>
+    </macro>
+    
+     <!-- separator line --> 
+    <macro name="-" in_menu="true" type_ahead="false"/>
+    
+     <macro name="not[Shift down]" in_menu="false" type_ahead="true" type_ahead_text="not">
+        <text>Not:C34(Shift down:C543)</text>
+    </macro>
+    
+     <macro name="dom_parseSource" in_menu="false" type_ahead="true" type_ahead_text="dom_">
+        <text><selection/>:=DOM Parse XML source:C719(<caret/>)			
+        	
+				If (Bool:C1537(OK))
+					
+					DOM CLOSE XML:C722(<selection/>)
+					
+				End if </text>
+    </macro>
+    
+     <macro name="dom_parseVariable" in_menu="false" type_ahead="true" type_ahead_text="dom_">
+        <text><selection/>:=DOM Parse XML variable:C720(<caret/>)		
+        		
+				If (Bool:C1537(OK))
+					
+					DOM CLOSE XML:C722(<selection/>)
+					
+				End if </text>
+    </macro>
+    
+     <macro name="ON ERR CALL" in_menu="false" type_ahead="true">
+        <text>
+        	$Txt_onErrCallMethod:=Method called on error:C704
+        	 //====================== [
+        	ON ERR CALL:C155("<caret/>") 
+        	
+        	<selection/>
+        	
+        	ON ERR CALL:C155($Txt_onErrCallMethod) 
+        	 //====================== ]	
+				</text>
+    </macro>    
+        
+    <!-- THE FOLLOWING MACROS ARE ONLY AVAILABLE THRU TYPE AHEAD -->
+    
+    <macro name="size of array" in_menu="false" in_toolbar="false">
+        <text>Size of array:C274(<caret/>)</text>
+    </macro>
+    
+    <macro name="Find in array" in_menu="false" in_toolbar="false">
+        <text>Find in array:C230(<caret/>;toFind)</text>
+    </macro>
+    
+    <macro name="New shared object" in_menu="false" in_toolbar="false">
+        <text>New shared object
+        
+        	Use(<caret/>)
+            
+            
+          End use
+        </text>
+    </macro> 
+    
+    <macro name="choose" in_menu="false" in_toolbar="false">
+        <text>Choose:C955(<caret/>; ; )</text>
+    </macro>
+    
+    <!-- SHORTCUTS -->
+    
+    <macro name="null_date" in_menu="false" in_toolbar="false">
+        <text>!00/00/00!</text>
+    </macro>
+    
+    <macro name="null_time" in_menu="false" in_toolbar="false">
+        <text>†00:00:00†</text>
+    </macro>
+    
+    <macro name="null_hexa" in_menu="false" in_toolbar="false">
+        <text>0x0000</text>
+    </macro>
+       
+    <macro name=">" in_menu="false" in_toolbar="false">
+        <text>-></text>
+    </macro> 
+    
+    <macro name="ok" in_menu="false" in_toolbar="false">
+        <text>Bool:C1537(OK)</text>
+    </macro>
+    
+</macros>
