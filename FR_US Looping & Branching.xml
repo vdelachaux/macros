@@ -85,4 +85,20 @@
         <text>Until</text>
     </macro>
     
+    <macro name="Pour chaque" in_menu="false" type_ahead="true" in_toolbar="false">
+        <text>For each</text>
+    </macro>
+    
+    <macro name="Fin de chaque" in_menu="false" type_ahead="true" in_toolbar="false">
+        <text>End for each</text>
+    </macro>
+    
+    <macro name="Use" in_menu="false" type_ahead="true" in_toolbar="false">
+        <text>End for each</text>
+    </macro>
+    
+    <macro name="Fin utiliser" in_menu="false" type_ahead="true" in_toolbar="false">
+        <text>End use</text>
+    </macro>
+    
 </macros>
