@@ -1,4 +1,4 @@
-# Macros
+# Macros for 4D
 🇺🇸
 
 * `Macros.xml` This empty file, placed in the "~Current 4D folder/Macros v2/" prevents 4D from installing the default macros.
